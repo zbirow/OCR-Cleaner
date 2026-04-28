@@ -68,13 +68,13 @@
 <body>
 
 <div id="vectorDrawingUI">
-    <span>🖊️ Tryb rysowania wektora (Klikaj na obrazku)</span>
-    <button class="btn btn-light btn-sm fw-bold" onclick="finishVectorDrawing()">✔ Zakończ rysowanie</button>
-    <button class="btn btn-dark btn-sm fw-bold" onclick="cancelVectorDrawing()">❌ Anuluj</button>
+    <span>🖊️ Vector Drawing Mode (Click on the image)</span>
+    <button class="btn btn-light btn-sm fw-bold" onclick="finishVectorDrawing()">✔ Finish Drawing</button>
+    <button class="btn btn-dark btn-sm fw-bold" onclick="cancelVectorDrawing()">❌ Cancel</button>
 </div>
 
 <div id="contextMenu">
-    <div id="menuHeader">🛠️ Opcje Dymka <span onclick="hideMenu()" style="cursor:pointer">✖</span></div>
+    <div id="menuHeader">🛠️ Options <span onclick="hideMenu()" style="cursor:pointer">✖</span></div>
     <div class="menu-item" onclick="addBubble('rect'); event.stopPropagation();">🟩 Add Rectangle</div>
     <div class="menu-item" onclick="addBubble('circle'); event.stopPropagation();">⚪ Add Circle</div>
     <div class="menu-item" onclick="addBubble('triangle'); event.stopPropagation();">🔺 Add Triangle</div>
@@ -83,34 +83,34 @@
     
     <div class="color-panel mt-2" onclick="event.stopPropagation()">
         <!-- KONTROLA OBROTU -->
-        <div class="d-flex justify-content-between small text-white fw-bold mb-1"><span>🔄 Obrót kształtu</span><span id="lblShapeAngle">0°</span></div>
+        <div class="d-flex justify-content-between small text-white fw-bold mb-1"><span>🔄 Rotate</span><span id="lblShapeAngle">0°</span></div>
         <input type="range" id="shapeAngle" min="0" max="360" value="0" class="form-range mb-3" style="height:5px;" oninput="updateShapeAngle()">
         
         <div class="menu-sep mb-3"></div>
 
         <div class="d-flex justify-content-between align-items-center mb-2">
-            <label class="m-0">🎨 WYPEŁNIENIE</label>
+            <label class="m-0">🎨 Fill</label>
             <div class="form-check form-switch m-0">
                 <input class="form-check-input" type="checkbox" id="fullPreviewToggle" onchange="toggleFullPreview()">
-                <label class="form-check-label text-white small fw-bold" style="font-size: 0.7rem; margin-top: 2px;" for="fullPreviewToggle">Pełny podgląd</label>
+                <label class="form-check-label text-white small fw-bold" style="font-size: 0.7rem; margin-top: 2px;" for="fullPreviewToggle">Full Preview</label>
             </div>
         </div>
         
         <div class="d-flex gap-3 mb-2 small text-white">
-            <label><input type="radio" name="fillType" value="solid" onchange="updateFillType()" checked> Jednolity</label>
+            <label><input type="radio" name="fillType" value="solid" onchange="updateFillType()" checked> Solid</label>
             <label><input type="radio" name="fillType" value="gradient" onchange="updateFillType()"> Gradient</label>
         </div>
         
         <div id="gradControls" style="display:none; background: #1a1a2a; padding: 10px; border-radius: 8px; margin-bottom: 10px; box-shadow: inset 0 0 5px rgba(0,0,0,0.5);">
             <div class="d-flex gap-3 mb-2 small text-info fw-bold">
-                <label><input type="radio" name="colorTarget" value="c1" checked onchange="switchColorTarget()"> Kolor 1</label>
-                <label><input type="radio" name="colorTarget" value="c2" onchange="switchColorTarget()"> Kolor 2</label>
+                <label><input type="radio" name="colorTarget" value="c1" checked onchange="switchColorTarget()"> Color 1</label>
+                <label><input type="radio" name="colorTarget" value="c2" onchange="switchColorTarget()"> Color 2</label>
             </div>
-            <div class="d-flex justify-content-between small text-white mt-2"><span>Kąt</span><span id="lblAngle">180°</span></div>
+            <div class="d-flex justify-content-between small text-white mt-2"><span>Angle</span><span id="lblAngle">180°</span></div>
             <input type="range" id="gradAngle" min="0" max="360" value="180" class="form-range" style="height:5px;" oninput="updateGradientLive()">
             <div class="d-flex justify-content-between small text-white mt-1"><span>Start</span><span id="lblStop1">0%</span></div>
             <input type="range" id="gradStop1" min="0" max="100" value="0" class="form-range" style="height:5px;" oninput="updateGradientLive()">
-            <div class="d-flex justify-content-between small text-white mt-1"><span>Koniec</span><span id="lblStop2">100%</span></div>
+            <div class="d-flex justify-content-between small text-white mt-1"><span>End</span><span id="lblStop2">100%</span></div>
             <input type="range" id="gradStop2" min="0" max="100" value="100" class="form-range" style="height:5px;" oninput="updateGradientLive()">
         </div>
 
@@ -131,9 +131,9 @@
         
         <div class="d-flex justify-content-between align-items-center gap-2">
             <input type="text" id="hexInput" class="color-hex-input" value="#ffffff" maxlength="7">
-            <button class="btn-apply-color w-100" onclick="hideMenu();">✓ Gotowe</button>
+            <button class="btn-apply-color w-100" onclick="hideMenu();">✓ Accept</button>
         </div>
-        <button class="btn-eyedropper" onclick="activateEyedropper();">🎨 Pobierz kolor z obrazka</button>
+        <button class="btn-eyedropper" onclick="activateEyedropper();">🎨 Get color</button>
     </div>
 </div>
 
