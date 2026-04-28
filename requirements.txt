@@ -1,0 +1,7 @@
+Flask==2.3.3
+opencv-python==4.10.0.84
+easyocr==1.7.1
+numpy==1.26.4
+Pillow==11.1.0
+deep-translator==1.11.4
+pywin32==310
