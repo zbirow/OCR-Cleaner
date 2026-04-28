@@ -100,4 +100,4 @@ The `.psd` export option uses `win32com.client` to physically open Adobe Photosh
 * You might see Photoshop flash or open briefly while saving. This is normal behavior.
 
 # Thanks to:
-CHAMBER  - ideas and tests
+cicha szatynka  - ideas and tests
