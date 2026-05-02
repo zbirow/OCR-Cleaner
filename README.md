@@ -43,7 +43,7 @@ Export your cleaned pages to a selected folder in three ways:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YourUsername/Manga-Cleaner.git
+   git clone https://github.com/zbirow/OCR-Cleaner.git
    cd Manga-Cleaner
    ```
 
